@@ -1,0 +1,50 @@
+{
+  "name": "tastin",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelorl/tastin-front.git"
+  },
+  "author": "marcelorl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelorl/tastin-front/issues"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "material-ui": "0.16.7",
+    "prop-types": "^15.5.8",
+    "react": "15.3.2",
+    "react-addons-test-utils": "15.3.2",
+    "react-dom": "15.3.2",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
+    "react-tap-event-plugin": "1.0.0",
+    "react-test-renderer": "15.3.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "enzyme": "^2.8.2",
+    "gh-pages": "^1.0.0",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "coverage": "npm test -- --coverage",
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b deploy"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "main": "./AuthFirstStep.js",
+  "name": "AuthFirstStep",
+  "private": true
+}

@@ -28,7 +28,7 @@ Login form written in react. Validation is client side too.
   NOTE: to access it locally http://localhost:3000
   
   #### Deploy
-      $ yarn deploy
+    $ yarn deploy
   
   #### Testing
     $ yarn test

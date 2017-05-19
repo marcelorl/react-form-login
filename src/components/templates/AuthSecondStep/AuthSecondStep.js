@@ -44,7 +44,7 @@ class AuthSecondStep extends Component {
         </RadioButtonGroup>
 
         <CardActions>
-          <RaisedButton primary label="Submit" type="submit" />
+          <RaisedButton className="form__submit" primary label="Submit" type="submit" />
           <RaisedButton
             secondary
             fullWidth

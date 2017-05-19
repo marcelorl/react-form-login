@@ -6,33 +6,18 @@ import {CardActions} from 'material-ui/Card';
 import Form from '../../organisms/Form';
 
 class AuthFirstStep extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      name: '',
-      age: ''
-    };
-
-    this._onChange = this._onChange.bind(this);
-  }
-
-  _onChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-
   render() {
+    const { onSubmit, onChange, state: { name, age } } = this.props;
+
     return (
-      <Form title="Step 1">
+      <Form title="Step 1" onSubmit={onSubmit}>
         <TextField
           name="name"
           hintText="John Doe"
           floatingLabelText="Name"
           floatingLabelFixed={true}
-          value={this.state.name}
-          onChange={e => this._onChange(e)}
+          value={name}
+          onChange={e => onChange(e)}
         />
         <TextField
           name="age"
@@ -40,12 +25,12 @@ class AuthFirstStep extends Component {
           floatingLabelText="Age"
           floatingLabelFixed={true}
           type="number"
-          value={this.state.age}
-          onChange={this._onChange}
+          value={age}
+          onChange={onChange}
         />
 
         <CardActions>
-          <RaisedButton label="Next" />
+          <RaisedButton primary label="Next" type="submit" />
         </CardActions>
       </Form>
     );

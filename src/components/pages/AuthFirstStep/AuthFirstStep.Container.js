@@ -7,12 +7,39 @@ import { onSubmitStep1 } from 'actions/auth';
 import AuthFirstStep from 'components/templates/AuthFirstStep';
 
 class AuthFirstStepContainer extends Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      name: '',
+      age: ''
+    };
+
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  onSubmit() {
+    this.props.onSubmit(this.state);
+
+    this.props.history.push('step-2');
   }
 
   render () {
-    return <AuthFirstStep {...this.props} />;
+    return (
+      <AuthFirstStep
+        {...this.props}
+        state={this.state}
+        onChange={this.onChange}
+        onSubmit={this.onSubmit}
+      />
+    );
   }
 }
 
@@ -26,7 +53,7 @@ const mapStateToProps = (state, ownProps) =>
   }, ownProps));
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  onSubmitStep1
+  onSubmit: onSubmitStep1
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthFirstStepContainer);

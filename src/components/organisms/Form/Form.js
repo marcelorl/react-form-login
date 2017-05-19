@@ -6,12 +6,12 @@ import './Form.css';
 
 class Form extends Component {
   render () {
-    const {children, title} = this.props;
+    const {children, onSubmit, title} = this.props;
 
     return (
       <Card className="login-card">
         <CardTitle title={title} />
-        <form className="login-card__form">
+        <form className="login-card__form" onSubmit={e => { e.preventDefault(); onSubmit() }}>
           {children}
         </form>
       </Card>
@@ -21,6 +21,7 @@ class Form extends Component {
 
 Form.propTypes = {
   children: PropTypes.node.isRequired,
+  onSubmit: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired
 };
 

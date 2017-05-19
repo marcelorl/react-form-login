@@ -1,0 +1,25 @@
+.profile {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 50%;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.profile__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.profile__row__data {
+  display: flex;
+  flex-direction: column;
+
+  &:last-child {
+    text-align: right;
+  }
+}

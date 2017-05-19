@@ -1,0 +1,5 @@
+{
+  "main": "./Profile.Container.js",
+  "name": "Profile",
+  "private": true
+}

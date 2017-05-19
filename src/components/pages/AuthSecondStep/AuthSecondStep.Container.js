@@ -31,6 +31,8 @@ class AuthSecondStepContainer extends Component {
 
   onSubmit() {
     this.props.onSubmit(this.state);
+
+    this.props.history.push('profile');
   }
 
   render () {

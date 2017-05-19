@@ -10,10 +10,7 @@ class AuthFirstStepContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: '',
-      age: ''
-    };
+    this.state = this.props.auth.step1;
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);

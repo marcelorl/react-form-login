@@ -15,18 +15,12 @@ const onSubmitStep2Action = data => {
   }
 };
 
-export const onSubmitStep1 = data => {
-  console.log('STEP 1', data);
+export const onSubmitStep1 = data =>
+  dispatch => {
+    Promise.resolve(dispatch(onSubmitStep1Action(data)));
+  };
 
-  return dispatch => {
-    dispatch(onSubmitStep1Action(data));
-  }
-};
-
-export const onSubmitStep2 = data => {
-  console.log(data);
-
-  return dispatch => {
-    dispatch(onSubmitStep2Action(data));
-  }
-};
+export const onSubmitStep2 = data =>
+  dispatch => {
+    Promise.resolve(dispatch(onSubmitStep2Action(data)));
+  };

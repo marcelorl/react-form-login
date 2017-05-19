@@ -13,10 +13,6 @@ Login form written in react. Validation is client side too.
   - Redux
   - Semistandard
   - material-ui
-  - enzyme
-  - tests
-  - test coverage report
-  - react-validation
   
 ### Commands
   #### Installation
@@ -29,7 +25,3 @@ Login form written in react. Validation is client side too.
   
   #### Deploy
     $ yarn deploy
-  
-  #### Testing
-    $ yarn test
-    $ yarn coverage

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Route } from 'react-router-dom';
-import AuthFirstStep from '../AuthFirstStep';
-import AuthSecondStep from '../AuthSecondStep';
+import AuthFirstStep from 'components/pages/AuthFirstStep';
+import AuthSecondStep from 'components/pages/AuthSecondStep';
 
 import './App.css';
 

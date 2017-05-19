@@ -1,0 +1,5 @@
+{
+  "main": "./AuthSecondStep.Container.js",
+  "name": "AuthSecondStep",
+  "private": true
+}

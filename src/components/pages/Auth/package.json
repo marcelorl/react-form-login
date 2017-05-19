@@ -1,5 +1,0 @@
-{
-  "main": "./Auth.Container.js",
-  "name": "Auth",
-  "private": true
-}

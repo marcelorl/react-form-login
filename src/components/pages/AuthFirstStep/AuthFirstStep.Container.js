@@ -3,15 +3,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Auth from 'components/templates/Auth';
+import { onSubmitStep1 } from 'actions/auth';
+import AuthFirstStep from 'components/templates/AuthFirstStep';
 
-class AuthContainer extends Component {
+class AuthFirstStepContainer extends Component {
+  componentDidMount() {
+
+  }
+
   render () {
-    return <Auth {...this.props} />;
+    return <AuthFirstStep {...this.props} />;
   }
 }
 
-AuthContainer.propTypes = {
+AuthFirstStepContainer.propTypes = {
   auth: PropTypes.shape({})
 };
 
@@ -21,6 +26,7 @@ const mapStateToProps = (state, ownProps) =>
   }, ownProps));
 
 const mapDispatchToProps = dispatch => bindActionCreators({
+  onSubmitStep1
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthFirstStepContainer);

@@ -1,40 +1,23 @@
 import {
-  USER_COORDS_REQUEST_FETCH,
-  USER_COORDS_SUCCESS_FETCH,
-  USER_SUCCESS_SAVE,
-  USER_LOGOUT
+  ON_SUBMIT_STEP_1,
+  ON_SUBMIT_STEP_2
 } from 'actions/auth';
 
 const INITIAL_STATE = {
-  loading: false, user: {}, logged: false, error: ''
+  step1: {}, step2: {}, errors: {}, valid: false
 };
 
 const authReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case USER_COORDS_REQUEST_FETCH:
+    case ON_SUBMIT_STEP_1:
       return Object.assign({}, state, {
-        error: '',
-        loading: true,
-        position: {}
+        error: {},
+        valid: false
       });
-    case USER_COORDS_SUCCESS_FETCH:
-      return Object.assign({}, state, {
-        error: '',
-        loading: false,
-        position: action.position
-      });
-    case USER_SUCCESS_SAVE:
+    case ON_SUBMIT_STEP_2:
       return Object.assign(state, {
-        error: '',
-        loading: false,
-        logged: true,
-        user: action.user
-      });
-    case USER_LOGOUT:
-      return Object.assign(state, {
-        error: '',
-        logged: false,
-        user: {}
+        error: {},
+        valid: false
       });
     default:
       return state

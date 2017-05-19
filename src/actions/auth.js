@@ -1,40 +1,30 @@
-export const ON_CHANGE = 'ON_CHANGE';
-export const ON_LOGIN_SUCCESS = 'ON_LOGIN_SUCCESS';
-export const ON_LOGIN_FAIL = 'ON_LOGIN_FAIL';
-export const ON_LOGOUT = 'ON_LOGOUT';
+export const ON_SUBMIT_STEP_1 = 'ON_SUBMIT_STEP_1';
+export const ON_SUBMIT_STEP_2 = 'ON_SUBMIT_STEP_2';
 
-const onChange = () => {
+const onSubmitStep1Action = data => {
   return {
-    type: ON_CHANGE
+    type: ON_SUBMIT_STEP_1,
+    data
   }
 };
 
-const onLoginSuccess = () => {
+const onSubmitStep2Action = data => {
   return {
-    type: ON_LOGIN_SUCCESS
+    type: ON_SUBMIT_STEP_2,
+    data
   }
 };
 
-const onLoginFail = () => {
-  return {
-    type: ON_LOGIN_FAIL
-  }
-};
+export const onSubmitStep1 = data => {
 
-export const logout = () => {
+
   return dispatch => {
-    dispatch();
+    dispatch(onSubmitStep1Action(data));
   }
 };
 
-export const login = () => {
+export const onSubmitStep2 = data => {
   return dispatch => {
-    dispatch();
-  }
-};
-
-export const change = () => {
-  return dispatch => {
-    dispatch();
+    dispatch(onSubmitStep2Action(data));
   }
 };

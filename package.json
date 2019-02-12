@@ -14,27 +14,27 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
-    "material-ui": "0.16.7",
+    "material-ui": "0.20.2",
     "prop-types": "^15.5.8",
-    "react": "15.3.2",
-    "react-addons-test-utils": "15.3.2",
-    "react-dom": "15.3.2",
-    "react-redux": "^5.0.4",
+    "react": "16.8.1",
+    "react-addons-test-utils": "15.6.2",
+    "react-dom": "16.8.1",
+    "react-redux": "^6.0.0",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-router-redux": "next",
-    "react-tap-event-plugin": "1.0.0",
-    "react-test-renderer": "15.3.2",
-    "redux": "^3.6.0",
+    "react-tap-event-plugin": "3.0.3",
+    "react-test-renderer": "16.8.1",
+    "redux": "^4.0.1",
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "enzyme": "^2.8.2",
-    "gh-pages": "^1.0.0",
+    "enzyme": "^3.8.0",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
-    "react-scripts": "0.9.5"
+    "react-scripts": "2.1.5"
   },
   "scripts": {
     "coverage": "npm test -- --coverage",

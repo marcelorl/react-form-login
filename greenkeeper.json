@@ -1,0 +1,19 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "src/components/organisms/Form/package.json",
+        "src/components/pages/App/package.json",
+        "src/components/pages/AuthFirstStep/package.json",
+        "src/components/pages/AuthSecondStep/package.json",
+        "src/components/pages/Profile/package.json",
+        "src/components/templates/App/package.json",
+        "src/components/templates/AuthFirstStep/package.json",
+        "src/components/templates/AuthSecondStep/package.json",
+        "src/components/templates/Profile/package.json",
+        "src/reducers/package.json"
+      ]
+    }
+  }
+}
